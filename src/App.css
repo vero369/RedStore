@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(to right, #ffd6d6, #a86060, #563434);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  align-items: stretch;
+}

@@ -1,0 +1,211 @@
+/* ---------------- Navbar Container ---------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  background-color: #a86060;
+  z-index: 1000;
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+
+/* Logo */
+.navbar img {
+  height: 60px;
+  cursor: pointer;
+}
+
+/* ---------------- Navigation Links ---------------- */
+.navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.navlink ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlink ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navlink ul li:hover {
+  color: red;
+}
+/* ---------------- Active / Inactive Links ---------------- */
+.navbar .active {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.navbar .inactive {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .inactive:hover {
+  color: #ffcccc;
+}
+
+
+/* ---------------- Product Dropdown ---------------- */
+.nav-item {
+  position: relative;
+}
+
+.product-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.PDJ {
+  color: white;
+  font-weight: 600;
+  text-decoration: underline gray;
+  transition: color 0.3s ease;
+}
+
+.PDJ:active {
+  color: red;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #813636;
+  border: 2px solid #141414;
+  border-radius: 8px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  animation: dropdownFade 0.2s ease-in-out;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: underline #201e1e;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: #c07b7b;
+  color: red;
+  font-weight: bold;
+}
+
+/* ---------------- Button ---------------- */
+.navbar .btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .btn:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* ---------------- User Profile ---------------- */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.user-avatar {
+  width: 65px;
+  height: 55px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 2px solid #f06;
+  object-fit: cover;
+}
+
+.user-avatar.initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f06;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ---------------- Responsive Layout ---------------- */
+@media (max-width: 768px) {
+  .navlink {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navlink.open {
+    display: flex;
+  }
+
+  .navbar .btn {
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown-menu li {
+    padding: 8px;
+  }
+
+  .user-info {
+    margin-left: 0;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar .btn {
+    padding: 18px 32px;
+    font-size: 1.1rem;
+  }
+}
