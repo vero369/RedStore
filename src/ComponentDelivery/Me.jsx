@@ -29,8 +29,8 @@ const Me = () => {
         </div>
         <div className="skills">
           <h2>EXTERNAL SKILL</h2>
-          <div><a href="https://www.wattpad.com/story/397167506-true-love" target="_blank" rel="noreferrer">
-            <img src={image.wappady} alt="" />
+          <div><a href="https://alphanovel.io/novels/fantasy/curse-of-the-crimson-eyes-by-chris-beauty" target="_blank" rel="noreferrer">
+            <img src={image.chris} alt="Chris Beauty" />
           </a>
           </div>
           

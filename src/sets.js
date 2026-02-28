@@ -76,6 +76,7 @@ import payHand from './ShelfMW/payHand.png';
 import bell from './ShelfMW/bell.png';
 import CS from './ShelfMW/CS.PNG';
 import CuSe from './ShelfMW/CuSe.PNG';
+import chris from './ShelfMW/chris.png';
 
 export const image = {
   black,
@@ -156,4 +157,5 @@ export const image = {
   bell,
   CS,
   CuSe,
+  chris,
 }

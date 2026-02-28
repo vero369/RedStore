@@ -3,7 +3,7 @@ import "./Pages.css";
 
 const Delivery = () => {
   return (
-    <div>We Delivery Now</div>
+    <div>We will deliver your order soon!</div>
   )
 }
 

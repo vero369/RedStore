@@ -3,54 +3,106 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  flex-wrap: wrap;
+  padding: 0.8rem 2rem;
+  background-color: #a86060;
   position: sticky;
   top: 0;
-  background-color: #a86060;
   z-index: 1000;
-  height: 100px;
-  border-bottom: 1px solid black;
+  height: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-/* Logo */
-.navbar img {
-  height: 60px;
+.menu {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 64, 64, 0.9);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.menu:hover {
+  transform: scale(1.12);
+  background: #ff2e2e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Optional animation when toggling open/close */
+.menu:active {
+  transform: scale(0.95);
+}
+
+/* ✅ For smaller screens */
+@media (max-width: 768px) {
+  .menu {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6rem;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+
+/* ---------------- Logo ---------------- */
+.navbar img {
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar img:hover {
+  transform: scale(1.05);
 }
 
 /* ---------------- Navigation Links ---------------- */
 .navlink {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
 }
 
 .navlink ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 2rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .navlink ul li {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
   color: white;
   font-weight: 500;
-  transition: color 0.3s ease;
-  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navlink ul li:hover {
-  color: red;
+  color: #ffcccc;
+  transform: scale(1.05);
 }
+
 /* ---------------- Active / Inactive Links ---------------- */
 .navbar .active {
-  color: red;
-  font-weight: bold;
+  color: #ff2b2b;
+  font-weight: 600;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
@@ -58,13 +110,7 @@
 .navbar .inactive {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
-
-.navbar .inactive:hover {
-  color: #ffcccc;
-}
-
 
 /* ---------------- Product Dropdown ---------------- */
 .nav-item {
@@ -75,35 +121,34 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 0.3rem;
 }
 
 .PDJ {
   color: white;
   font-weight: 600;
-  text-decoration: underline gray;
+  text-decoration: underline rgba(255, 255, 255, 0.3);
   transition: color 0.3s ease;
 }
 
-.PDJ:active {
-  color: red;
+.PDJ:hover {
+  color: #ff2b2b;
 }
 
-/* Dropdown */
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   background: #813636;
-  border: 2px solid #141414;
-  border-radius: 8px;
+  border-radius: 10px;
   list-style: none;
-  padding: 8px 0;
+  padding: 0.5rem 0;
   margin: 0;
-  min-width: 160px;
+  min-width: 170px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  z-index: 10;
+  z-index: 20;
   animation: dropdownFade 0.2s ease-in-out;
 }
 
@@ -113,28 +158,27 @@
 }
 
 .dropdown-menu li {
-  padding: 10px 15px;
+  padding: 0.7rem 1rem;
   color: white;
-  text-decoration: underline #201e1e;
   transition: background 0.2s, color 0.2s;
 }
 
 .dropdown-menu li:hover {
   background: #c07b7b;
-  color: red;
-  font-weight: bold;
+  color: #ff2b2b;
+  font-weight: 600;
 }
 
 /* ---------------- Button ---------------- */
 .navbar .btn {
-  background-color: red;
+  background-color: #ff2b2b;
   color: white;
   border: none;
-  padding: 15px 25px;
+  padding: 0.8rem 1.8rem;
+  border-radius: 20px;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 15px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar .btn:hover {
@@ -147,16 +191,21 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 10px;
+  gap: 1rem;
 }
 
 .user-avatar {
-  width: 65px;
+  width: 55px;
   height: 55px;
-  border-radius: 25px;
+  border-radius: 50%;
   cursor: pointer;
   border: 2px solid #f06;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
 }
 
 .user-avatar.initials {
@@ -166,46 +215,86 @@
   background: #f06;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 /* ---------------- Responsive Layout ---------------- */
+@media (max-width: 1024px) {
+  .navlink ul {
+    gap: 1.2rem;
+  }
+
+  .navbar .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    height: auto;
+  }
+
   .navlink {
+    width: 100%;
     display: none;
     flex-direction: column;
-    width: 100%;
+    background: #a86060;
+    margin-top: 0.5rem;
   }
 
   .navlink.open {
     display: flex;
   }
 
-  .navbar .btn {
-    margin-top: 10px;
+  .navlink ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+    padding: 0.8rem 0;
   }
 
   .dropdown-menu {
     position: static;
     background: transparent;
-    border: none;
     box-shadow: none;
+    padding-left: 1rem;
   }
 
   .dropdown-menu li {
-    padding: 8px;
+    padding: 0.6rem 0;
   }
 
   .user-info {
-    margin-left: 0;
-    justify-content: flex-end;
-    width: 100%;
+    align-self: flex-end;
+    margin-top: 0.8rem;
+  }
+
+  .user-avatar {
+    width: 50px;
+    height: 50px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navlink ul {
+    gap: 0.5rem;
+  }
+
+  .navbar img {
+    height: 45px;
+  }
+
   .navbar .btn {
-    padding: 18px 32px;
-    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 15px;
   }
 }
