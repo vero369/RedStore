@@ -77,6 +77,9 @@ import bell from './ShelfMW/bell.png';
 import CS from './ShelfMW/CS.PNG';
 import CuSe from './ShelfMW/CuSe.PNG';
 import chris from './ShelfMW/chris.png';
+import Linkedin from './ShelfMW/linkedin.png';
+import twitter from './ShelfMW/twitter.png';
+import MENT from './ShelfMW/MENT.png';
 
 export const image = {
   black,
@@ -158,4 +161,7 @@ export const image = {
   CS,
   CuSe,
   chris,
+  Linkedin,
+  twitter,
+  MENT,
 }

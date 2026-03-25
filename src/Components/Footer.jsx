@@ -35,14 +35,14 @@ const Footer = () => {
         <div className='liveSection'>
           <div className='section'>
             <h1 className='Live'>
-              We Are Live on Social App
+              We Are Live on Social Platforms
             </h1>
             <div className='Apps'>
-              <a href="https://snapchat.com/t/8WR4IEr4"><img src={image.Snap} alt="" /></a>
+              <a href="https://www.linkedin.com/in/michael-veronica-b1a611395/"><img src={image.Linkedin} alt="" /></a>
 
-              <a href="https://www.instagram.com/chris_beauty24?igsh=NHBzbmFjMWZtZzBu&utm_source=qr"><img src={image.instagram} alt="" /></a>
+              <a href="https://www.instagram.com/chris_beauty24?igsh=NHBzbmFjMWZtZzBu&utm_source=qr"><img src={image.twitter} alt="" /></a>
 
-              <a href="https://formsubmit.co/el/ruciki"><img src={image.Email1} alt="" /></a>
+              <a href="https://formsubmit.co/el/ruciki"><img src={image.MENT} alt="" /></a>
             </div>
              <p class="copyright">Copyright  2025 - Chris_beauty </p>
           </div>
