@@ -1,6 +1,7 @@
 import React from "react";
 import "./Pages.css";
 import { image } from "../sets";
+import { ShelfMW } from "../sets";
 
 const Me = () => {
   return (
@@ -16,11 +17,10 @@ const Me = () => {
           </p>
 
           <div className="Main">
-            I'm a front-end developer, progressing to full-stack. I've done more
-            projects!
+            Get in touch with the developer.
             <button className="Git">
-              <a href="https://github.com/vero369" target="_blank" rel="noreferrer">
-                <img src={image.GITHUB} alt="GitHub" />
+              <a href="https://veros-ai.vercel.app/" target="_blank" rel="noreferrer">
+                <img src={image.Linkedin} alt="LinkedIn" />
                 <div className="overlay">CLICK!</div>
               </a>
             </button>
@@ -28,9 +28,9 @@ const Me = () => {
 
         </div>
         <div className="skills">
-          <h2>EXTERNAL SKILL</h2>
-          <div><a href="https://alphanovel.io/novels/fantasy/curse-of-the-crimson-eyes-by-chris-beauty" target="_blank" rel="noreferrer">
-            <img src={image.chris} alt="Chris Beauty" />
+          <h2>Subscribe to my Linktree for speccial notifications.</h2>
+          <div><a href="https://linktr.ee/Chris_beauty12" rel="noreferrer">
+            <img src={image.linktree} alt="Chris Beauty" />
           </a>
           </div>
           
@@ -38,7 +38,7 @@ const Me = () => {
 
       </div>
 
-      <div className="Apps"> <p>Subscribe on other Social Media</p>
+      {/*<div className="Apps"> <p>Subscribe on other Social Media</p>
         <a href="https://snapchat.com/t/8WR4IEr4"><img src={image.Snap} alt="" /><div className="overlay">CLICK!</div></a>
 
         <a href="https://www.instagram.com/chris_beauty24?igsh=NHBzbmFjMWZtZzBu&utm_source=qr"><img src={image.instagram} alt="" /><div className="overlay">CLICK!</div></a>
@@ -46,7 +46,7 @@ const Me = () => {
         <a href="https://www.youtube.com/channel/UCNE0WCrUzfS5cR1tkDzwOkg"><img src={image.Youtube} alt="" /><div className="overlay">CLICK!</div></a>
 
         <a href="https://x.com/VeronicaCh91249"><img src={image.X} alt="" /><div className="overlay">CLICK!</div></a>
-      </div>
+      </div>*/}
     </div>
   );
 };
