@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+
+    
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^5.2.0",
