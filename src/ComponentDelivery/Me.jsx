@@ -1,14 +1,13 @@
 import React from "react";
 import "./Pages.css";
 import { image } from "../sets";
-import { ShelfMW } from "../sets";
 
 const Me = () => {
   return (
     <div className="general">
       <div className="ME">
         <div className="first">
-          <img src={image.ToonMe} alt="me" />
+          <img src={image.beauty} alt="me" />
           <h1>I'm the creator</h1>
           <p>
             Hi there! I'm <strong>Chris_beauty</strong>. How are you? I hope

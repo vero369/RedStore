@@ -15,13 +15,13 @@
 }
 
 .menu {
-  position: fixed;
+  position: none;
   top: 25px;
   right: 25px;
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  background: rgba(255, 64, 64, 0.9);
+  background: rgba(161, 85, 85, 0.9);
   width: 55px;
   height: 55px;
   display: flex;
@@ -37,32 +37,39 @@
 
 .menu:hover {
   transform: scale(1.12);
-  background: #ff2e2e;
+  background: #f7a0a0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ✨ Optional animation when toggling open/close */
-.menu:active {
-  transform: scale(0.95);
+
+.active{
+  border-bottom:2px solid white;
+}
+@media(max-width:480px){
+  .navbar img{
+    width:140px;
+  }
+
 }
 
-/* ✅ For smaller screens */
-@media (max-width: 768px) {
-  .menu {
-    width: 45px;
-    height: 45px;
-    font-size: 1.6rem;
-    top: 20px;
-    right: 20px;
+----------------/* ✅ For smaller screens */-------------------
+@media (max-width:768px){
+  .menu{
+    display:flex;
+    position:fixed;
+    top:20px;
+    right:20px;
   }
 }
 
 
 /* ---------------- Logo ---------------- */
-.navbar img {
-  height: 55px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.navbar img{
+    width:auto;
+    height:auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .navbar img:hover {
@@ -70,11 +77,11 @@
 }
 
 /* ---------------- Navigation Links ---------------- */
-.navlink {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.navlink{
+    display:flex;
+    align-items:center;
+    gap:2rem;
 }
 
 .navlink ul {
@@ -113,8 +120,9 @@
 }
 
 /* ---------------- Product Dropdown ---------------- */
-.nav-item {
+.items {
   position: relative;
+  display:flex;
 }
 
 .product-link {
@@ -137,20 +145,22 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 110%;
+  top: 100%;
   left: 0;
-  background: #813636;
+  background: #702929;
   border-radius: 10px;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
-  min-width: 170px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 110px;
+  box-shadow: 0 4px 10px #420909e3;
   display: flex;
   flex-direction: column;
   z-index: 20;
   animation: dropdownFade 0.2s ease-in-out;
 }
+
+
 
 @keyframes dropdownFade {
   from { opacity: 0; transform: translateY(-5px); }
@@ -178,6 +188,8 @@
   border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
+      margin-left:20px;
+
   transition: all 0.3s ease;
 }
 
@@ -187,19 +199,18 @@
 }
 
 /* ---------------- User Profile ---------------- */
-.user-info {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  gap: 1rem;
+.user-info{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .user-avatar {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid #f06;
+  border: 2px solid rgba(255, 0, 102, 0.97);
   object-fit: cover;
   transition: transform 0.2s ease;
 }
@@ -235,18 +246,27 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 1.5rem;
-    height: auto;
-  }
+    height: auto;}
+
+    .user-info,
+    .navbar .btn{
+        margin:15px auto;
+    }
 
   .navlink {
     width: 100%;
     display: none;
     flex-direction: column;
     background: #a86060;
-    margin-top: 0.5rem;
-  }
+    padding:20px;
+    border-radius:10px;
+  
+   .menu {
+    display:flex;
+    }
+}
 
-  .navlink.open {
+.navlink.open {
     display: flex;
   }
 
@@ -268,12 +288,7 @@
     padding: 0.6rem 0;
   }
 
-  .user-info {
-    align-self: flex-end;
-    margin-top: 0.8rem;
-  }
-
-  .user-avatar {
+   .user-avatar {
     width: 50px;
     height: 50px;
   }

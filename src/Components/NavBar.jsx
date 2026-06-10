@@ -53,16 +53,16 @@ const NavBar = () => {
       {/* Mobile toggle */}
       <div className="menu" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "✖" : "☰"}
-      </div>
+      </div> 
 
       {/* Navlinks */}
       <div className={`navlink ${isOpen ? "open" : ""}`}>
         <ul className="items">
+          
           <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>
             <li>Home</li>
-            <hr />
-          </NavLink>
-
+          </NavLink> 
+          
           {/* Product dropdown */}
           <div className="nav-item">
             <div
@@ -84,7 +84,7 @@ const NavBar = () => {
           <hr />
 
           <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <li>Deliver</li>
+            <li>Contact</li>
             <hr />
           </NavLink>
 
@@ -94,33 +94,38 @@ const NavBar = () => {
           </NavLink>
 
           <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <li>About</li>
+            <li>About Us</li>
             <hr />
           </NavLink>
         </ul>
 
-        {/* ✅ User button logic */}
-        {user ? (
-          <div className="user-info">
-            {user.photoURL ? (
-              <img
-                src={user.photoURL}
-                alt="User Avatar"
-                className="user-avatar"
-                title={user.displayName}
-                onClick={() => navigate("/UserAccount")}
-              />
-            ) : (
-              <div className="user-avatar initials" onClick={() => navigate("/UserAccount")}>
-                {getInitials(user.displayName)}
-              </div>
-            )}
-          </div>
-        ) : (
-          <button onClick={handleClick} className="btn">
-            Sign Up
-          </button>
-        )}
+        {/* User button */}
+          <div className={`user-section ${isOpen ? "show" : ""}`}>
+            {user ? (
+              <div className="user-info">
+                {user.photoURL ? (
+                <img
+          src={user.photoURL}
+          alt="User Avatar"
+          className="user-avatar"
+          onClick={() => navigate("/UserAccount")}
+        />
+      ) : (
+        <div
+          className="user-avatar initials"
+          onClick={() => navigate("/UserAccount")}
+        >
+          {getInitials(user.displayName)}
+        </div>
+      )}
+    </div>
+  ) : (
+    <button onClick={handleClick} className="btn">
+      Sign Up
+    </button>
+  )}
+</div>
+          
       </div>
     </div>
   );

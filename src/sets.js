@@ -80,7 +80,7 @@ import chris from './ShelfMW/chris.png';
 import Linkedin from './ShelfMW/linkedin.png';
 import twitter from './ShelfMW/twitter.png';
 import MENT from './ShelfMW/MENT.png';
-import Me from './ShelfMW/Me.jpg';
+import beauty from './ShelfMW/beauty.jpg';
 import linktree from './ShelfMW/linktree.png';
 
 export const image = {
@@ -166,6 +166,6 @@ export const image = {
   Linkedin,
   twitter,
   MENT,
-  Me,
+  beauty,
   linktree
-}
+};
