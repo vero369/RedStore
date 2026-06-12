@@ -10,7 +10,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-{/*---------- LOGIN PART ----------*/}
+/* ---------- LOGIN PART ---------- */
 
 .Sign {
   display: flex;
@@ -82,7 +82,7 @@
 }
 
 
-{/*---------- PAY PART ----------*/}
+/* ---------- PAY PART ---------- */
 .GEN{
   background-image: url('../ShelfMW/payHand.png');
   background-size: cover;
@@ -104,6 +104,6 @@
   min-height: 80vh;
   flex-wrap: wrap;
   flex-basis: 50%;
-  //min-width: 300px;
+  /* min-width: 300px; */
   position: relative;
 }

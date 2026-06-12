@@ -98,7 +98,7 @@
 .View {
   cursor: pointer;
   background: red;
-  colot: black;
+  color: black;
   font-size: 1.95rem;
   transition: background 0.3s ease, transform 0.2s ease;
   border-radius: 25px;
@@ -107,7 +107,7 @@
 .View:hover{
   background-color: #a04f4ff3;
   transform: scale(1.05);
-  font: bold;
+  font-weight: bold;
 }
 
 /* === Responsive Tweaks === */

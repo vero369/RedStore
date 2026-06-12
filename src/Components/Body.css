@@ -6,7 +6,7 @@
   min-height: 80vh;
   flex-wrap: wrap;
   flex-basis: 50%;
-  //min-width: 300px;
+  /* min-width: 300px; */
   position: relative;
 }
 .all::before {

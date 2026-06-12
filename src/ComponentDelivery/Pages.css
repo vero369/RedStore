@@ -244,7 +244,7 @@ a {
   }
 }
 
-{/* ------------------Contact Us page------------------------- */}
+/* ------------------Contact Us page------------------------- */
 .US {
   display: flex;
   flex-direction: column;
@@ -302,7 +302,7 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
------------------------Delivery page------------------------- */
+/*-----------------------Delivery page------------------------- */
 
 .contact {
     min-height: 100vh;
