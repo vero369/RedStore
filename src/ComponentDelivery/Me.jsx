@@ -1,18 +1,30 @@
 import React from "react";
 import "./Pages.css";
 import { image } from "../sets";
+import { images } from "../assets";
 
 const Me = () => {
   return (
     <div className="general">
       <div className="ME">
         <div className="first">
-          <img src={image.beauty} alt="me" />
-          <h1>I'm the creator</h1>
-          <p>
-            Hi there! I'm <strong>Chris_beauty</strong>. How are you? I hope
-            you're enjoying your time on <b>RedStore</b>. Thanks for
-            patronizing!
+          <img src={images.cart} alt="logo" />
+          <h1>
+            Patronize Redstore today! 🎁 
+          </h1>
+          <p >
+            Fashion is more than what you wear—it's how you express yourself.
+            Discover timeless pieces and modern trends designed to refresh your wardrobe, 
+            boost your confidence, and help you look your best every day.
+            At RedStore, every collection is carefully selected to help you restore your style with comfort, 
+            elegance, and quality.<strong> Give your wardrobe a fresh start with styles that combine comfort, 
+            quality, and elegance. Whether you're dressing for work,
+            a special occasion, or everyday life, 
+            RedStore offers fashion that helps you feel confident wherever you go. </strong> 
+            Every outfit tells a story. At RedStore, we believe the right clothing can transform not 
+            only your appearance but also your confidence. Explore our carefully curated collections
+            and discover fashion that empowers you to look and feel your best.
+            <b> RedStore Your Fashion Confidence</b>
           </p>
 
           <div className="Main">
@@ -26,26 +38,18 @@ const Me = () => {
           </div>
 
         </div>
-        <div className="skills">
+        {/*<div className="skills">
           <h2>Subscribe to my Linktree for speccial notifications.</h2>
-          <div><a href="https://linktr.ee/Chris_beauty12" rel="noreferrer">
-            <img src={image.linktree} alt="Chris Beauty" />
-          </a>
+          <div>
+            <a href="https://linktr.ee/Chris_beauty12" rel="noreferrer">
+             <img src={image.linktree} alt="Chris Beauty" />
+            </a>
           </div>
           
-        </div>
+        </div>*/}
 
       </div>
 
-      {/*<div className="Apps"> <p>Subscribe on other Social Media</p>
-        <a href="https://snapchat.com/t/8WR4IEr4"><img src={image.Snap} alt="" /><div className="overlay">CLICK!</div></a>
-
-        <a href="https://www.instagram.com/chris_beauty24?igsh=NHBzbmFjMWZtZzBu&utm_source=qr"><img src={image.instagram} alt="" /><div className="overlay">CLICK!</div></a>
-
-        <a href="https://www.youtube.com/channel/UCNE0WCrUzfS5cR1tkDzwOkg"><img src={image.Youtube} alt="" /><div className="overlay">CLICK!</div></a>
-
-        <a href="https://x.com/VeronicaCh91249"><img src={image.X} alt="" /><div className="overlay">CLICK!</div></a>
-      </div>*/}
     </div>
   );
 };

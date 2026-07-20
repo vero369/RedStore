@@ -57,7 +57,7 @@ const Delivery = () => {
             ></textarea>
 
             <button type="submit">
-                    We will deliver your order soon! Drop a Message to get in touch with us.
+              Drop a Message to get in touch with us.
             </button>
           </form>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { image } from '../sets';
+//import { image } from '../sets';
 import { images } from '../assets';
 
 const Footer = () => {
@@ -15,7 +15,9 @@ const Footer = () => {
          <div className="newsletter">
            <h2>Stay in Fashion</h2>
            <p>Subscribe to get updates on new arrivals & discounts</p>
-           <form action="https://formsubmit.co/el/vayiwo" method="POST">
+           <form action=
+              "https://formsubmit.co/da6e608935f85a00caf27344e4061b14"
+               method="POST">
             <input
               type="email"
               id="email"
@@ -24,7 +26,11 @@ const Footer = () => {
               required
               className="Email"
             />
-            <button type="submit" className="SubscribeBtn">Subscribe</button>
+            <button type="submit" 
+              className="SubscribeBtn">
+              Subscribe
+            </button> 
+           
            </form>
          </div>
         </div>
@@ -33,19 +39,21 @@ const Footer = () => {
 
         {/*--------- second-----------*/}
         <div className='liveSection'>
-          <div className='section'>
+          {/*<div className='section'>
             <h1 className='Live'>
-              We Are Live on Social Platforms
+              We Are Live
             </h1>
             <div className='Apps'>
-              <a href="https://www.linkedin.com/in/michael-veronica-b1a611395/"><img src={image.Linkedin} alt="" /></a>
+              <a 
+              href="https://www.linkedin.com/in/nwaekwu-veronica-b1a611395/">
+                <img src={image.Linkedin} alt="" /></a>
 
-              <a href="https://www.instagram.com/chris_beauty24?igsh=NHBzbmFjMWZtZzBu&utm_source=qr"><img src={image.twitter} alt="" /></a>
+              <a href="https://formsubmit.co/el/ruciki">
+              <img src={image.MENT} alt="" /></a>
+            </div>*/}
 
-              <a href="https://formsubmit.co/el/ruciki"><img src={image.MENT} alt="" /></a>
-            </div>
-             <p class="copyright">Copyright  2025 - Chris_beauty </p>
-          </div>
+             <p class="copyright">© {new Date().getFullYear()} RedStore. All Rights Reserved.</p>
+
         </div>
 
     </div>

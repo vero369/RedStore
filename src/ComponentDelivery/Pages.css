@@ -16,7 +16,10 @@
   position: relative;
   overflow: hidden;
 }
-
+.Okay {
+  width: 5px;
+  height: 5px;
+}
 /* Subtle glowing background */
 .ME::before {
   content: "";
@@ -305,9 +308,19 @@ a {
 /*-----------------------Delivery page------------------------- */
 
 .contact {
+    position: relative;
     min-height: 100vh;
     padding: 80px 8%;
-    background: #f8f9fa;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url("../ShelfMW/CuSe.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .contact-container {
@@ -320,11 +333,11 @@ a {
 .contact-info h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #222;
+    color: #0f0f0f;
 }
 
 .contact-info p {
-    color: #666;
+    color: #110101;
     line-height: 1.8;
     margin-bottom: 30px;
 }
